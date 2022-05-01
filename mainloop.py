@@ -1,7 +1,7 @@
 from constants import SCREEN_HEIGHT, SCREEN_WIDTH, SLOT_LENGTH
-from gfx import Sprite
+from gfx import Sprite, draw_board
 import pygame
-from logic import draw_board, init_board, drop_slot, is_won
+from logic import init_board, drop_slot, is_won
 from math import floor    
 
 class Mainloop:
@@ -53,7 +53,7 @@ class Mainloop:
                                 is_full = False
                     if is_full:
                         self.game_over = True
-                        self.is_draw == True
+                        self.is_draw = True
     def draw(self, screen):
         if self.is_dropping:
             (self.red_checker if self.anim_sprite_color else self.yellow_checker).draw(screen, (self.anim_sprite_column * SLOT_LENGTH, self.anim_sprite_y))        

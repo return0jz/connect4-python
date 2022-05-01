@@ -16,7 +16,7 @@ def main():
             if event.type == pygame.QUIT:
                 running = False 
             loop.handle_event(event)
-        loop.update(1 / float(clock.tick(60)))
+        loop.update(1 / float(clock.tick(144)))
         screen.fill((0, 0, 0))
         loop.draw(screen)
         pygame.display.flip()
